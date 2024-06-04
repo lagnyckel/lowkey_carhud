@@ -1,15 +1,15 @@
 <template>
     <v-app v-if="displaying" style="background: transparent;">
         <v-container style="display: flex; justify-content: flex-end; align-items: flex-end; height: 100vh;">
-            <v-sheet width="300" style="background: #1213148f; color: white;" class="pa-4">
+            <v-sheet width="300" style="background: #101418a8; color: white;" class="pa-4">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
                     <span>
                         <span style="font-size: 42px;">{{ speed }}</span> <span style="font-size: 20px;">km/h</span>
                     </span>
 
                     <span>
-                        <v-icon :color="belt ? 'green' : 'red'" size="30">mdi-seatbelt</v-icon>
-                        <v-icon class="ma-3" :color="engine <= 20 ? 'red' : 'orange' && engine >= 70 ? 'green' : 'orange'" size="30">mdi-engine</v-icon>
+                        <v-icon :color="belt ? 'success' : 'error'" size="30">mdi-seatbelt</v-icon>
+                        <v-icon class="ma-3" :color="engine <= 20 ? 'error' : 'warning' && engine >= 70 ? 'success' : 'warning'" size="30">mdi-engine</v-icon>
                     </span>
                 </div>
 
